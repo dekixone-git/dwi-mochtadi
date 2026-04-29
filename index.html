@@ -37,14 +37,17 @@
       <div class="popup-container">
         <div class="popup-content">
           <h2 class="example1" data-aos="fade-down" data-aos-delay="800">The Wedding Of</h2>
-          <h1 data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000">Dwi <span> &</span> Alfiah.</h1>
+          <h1 data-aos="zoom-in" data-aos-delay="0" data-aos-duration="2000">Dwi <span> &</span> Alfiah</h1>
           <div class="row justify-content-center" data-aos="fade-up">
           <div class="col-md-8 col-11" >
             <p class="guest-label">Kepada Bapak/Ibu/Saudara/i</p>
+            <h2 class="fw-bolder text-capitalize guest-name" id="guestName">
+              Tamu Undangan
+            </h2>
             
-            <h2 class="fw-bolder text-capitalize guest-name" id="receiver"></h2>
-            <p class="guest-text"></p>
-          <p class="guest-label">Tanpa mengurangi rasa hormat, kami mengundang anda untuk hadir pada acara pernikahan kami.</p>
+            <p class="guest-text">
+              Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir pada acara pernikahan kami.
+            </p>
           </div>
         </div>
           
@@ -367,6 +370,18 @@
           once: true
         });
       </script>
+
+      <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const nama = params.get("to");
+    const guest = document.getElementById("guestName");
+
+    if (nama && guest) {
+        guest.textContent = decodeURIComponent(nama.replace(/\+/g, " "));
+    }
+});
+</script>
      
   </body>
 </html>
