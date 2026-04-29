@@ -294,32 +294,58 @@
     </section>
     <!-- End Wedding gift -->
     <!-- Start RSVP -->
-    <section class="rsvp">
-      <div class="row">
+<section class="rsvp" id="rsvp">
+  <div class="row">
 
-        <img src="images/rsvp.jpg" alt="" class="rsvp-img">
-        <div class="message" data-aos="fade-down">
-          <form id=""  >
-            <div class="input-group">
-              <input type="text" name="nama" placeholder="Nama">
-            </div>
-            <div class="input-group">
-              <input type="text" name="hubungan" placeholder="Hubungan (Saudara, Teman Kerja, Teman Sekolah)">
-            </div>
-            <div class="input-group">
-              <textarea  cols="30" rows="10" name="pesan" placeholder="Berikan Ucapan & Doa Terbaik Untuk kedua Mempelai"></textarea>
-            </div>
-            <button type="submit" class="btn">Send  <i data-feather="arrow-right" data-aos="fade-up" style="vertical-align: middle"></i></button>
-          </form>
-          <div class="container-card" data-aos="fade-up">
-            <div class="card-message">
-             
-            </div>
-          </div>
+    <img src="images/rsvp.jpg" alt="RSVP" class="rsvp-img">
+
+    <div class="message" data-aos="fade-down">
+
+      <form id="rsvpForm">
+
+        <div class="input-group">
+          <input
+            type="text"
+            name="nama"
+            placeholder="Nama Lengkap"
+            required>
+        </div>
+
+        <div class="input-group">
+          <input
+            type="text"
+            name="hubungan"
+            placeholder="Hubungan (Saudara / Teman / Rekan Kerja)"
+            required>
+        </div>
+
+        <div class="input-group">
+          <textarea
+            name="pesan"
+            rows="5"
+            placeholder="Berikan ucapan & doa terbaik..."
+            required></textarea>
+        </div>
+
+        <button type="submit" class="btn">
+          Send
+          <i data-feather="arrow-right" style="vertical-align: middle"></i>
+        </button>
+
+        <p id="statusMsg"></p>
+
+      </form>
+
+      <div class="container-card" data-aos="fade-up">
+        <div class="card-message" id="listUcapan">
+          <!-- Ucapan akan tampil di sini -->
         </div>
       </div>
-    </section>
-    <!-- End RSVP -->
+
+    </div>
+  </div>
+</section>
+<!-- End RSVP -->
 
     <!-- Start Doa -->
     <section class="doa" id="home">
@@ -355,6 +381,8 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- arctext -->
     <script src="assets/Arctext/js/jquery.arctext.js"></script>
+    <!--message-->
+    <script src="message.js"></script>
     <!-- sweetalert -->
     <script src="assets/sweetalert2/sweetalert2.all.min.js"></script>
     <script>
@@ -382,6 +410,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 </script>
-     
+
   </body>
 </html>

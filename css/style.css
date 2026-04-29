@@ -1459,3 +1459,38 @@ footer .credit h5 {
   .guest-text {
     font-size: 0.95rem;
   }
+
+
+
+  #statusMsg{
+  margin-top:10px;
+  color:#000000;
+  font-size:14px;
+}
+
+.card-message{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.ucapan-item{
+  background:rgba(255,255,255,.08);
+  padding:15px;
+  border-radius:14px;
+  color:#000000;
+}
+
+.ucapan-item h4{
+  margin:0;
+  font-size:18px;
+}
+
+.ucapan-item small{
+  opacity:.7;
+}
+
+.ucapan-item p{
+  margin-top:8px;
+}
