@@ -133,7 +133,7 @@ function resetCardStyles() {
   });
 }
 
-function noUtsman() {
+function noDwi() {
   var teks = document.getElementById("textSalin").textContent;
   var teksTanpaTanda = teks.replace(/-/g, "");
 
@@ -146,7 +146,7 @@ function noUtsman() {
   document.body.removeChild(textarea);
   toastr["success"]("No Dana Berhasil Disalin", "Success");
 }
-function noYani() {
+function noAlfiah() {
   var teks = document.getElementById("textSalin2").textContent;
   var teksTanpaTanda = teks.replace(/-/g, "");
 

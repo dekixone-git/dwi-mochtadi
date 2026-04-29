@@ -24,7 +24,7 @@
 
 	    var settings = {
 			'minFontSize' : Number.NEGATIVE_INFINITY,
-			'maxFontSize' : Number.POSITIVE_INFINITY
+			'maxFontSize' : Number.POALFIAHVE_INFINITY
 		};
 
 		return this.each(function() {

@@ -50,7 +50,7 @@ body {
 
 /* Gaya untuk popup */
 .popup {
-  display: none; /* Mulai dengan mengatur popup menjadi tersembunyi */
+  display: none;
   align-items: center;
   position: fixed;
   z-index: 9999;
@@ -59,10 +59,18 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-image: url(../images/popup.jpg);
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("../images/popup.jpg");
+
   background-size: cover;
-  background-position: center; /* Latar belakang transparan */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
   min-height: 100vh;
   transition: transform 4s ease, opacity 4s ease;
 }
@@ -1412,3 +1420,42 @@ footer .credit h5 {
     font-size: 52%;
   }
 }
+
+
+/* Tulisan pembuka */
+.guest-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: #d4d4d4;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* Nama tamu */
+.guest-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.35);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+/* Paragraf bawah */
+.guest-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #f3f3f3;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: auto;
+}
+
+.guest-label {
+    font-size: 1rem;
+  }
+
+  .guest-text {
+    font-size: 0.95rem;
+  }
