@@ -1462,35 +1462,78 @@ footer .credit h5 {
 
 
 
-  #statusMsg{
-  margin-top:10px;
-  color:#000000;
-  font-size:14px;
+#statusMsg{
+  margin-top: 10px;
+  color: #000000;
+  font-size: 14px;
+  text-align: center;
 }
 
+/* Container list ucapan */
 .card-message{
-  margin-top:20px;
-  display:flex;
-  flex-direction:column;
-  gap:15px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
+/* Card ucapan */
 .ucapan-item{
-  background:rgba(255,255,255,.08);
-  padding:15px;
-  border-radius:14px;
-  color:#000000;
+  background: rgba(255,255,255,0.75);
+  padding: 15px;
+  border-radius: 14px;
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 
-.ucapan-item h4{
-  margin:0;
-  font-size:18px;
+/* Header nama + waktu */
+.ucapan-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
 }
 
-.ucapan-item small{
-  opacity:.7;
+/* Nama */
+.ucapan-header h4{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
 }
 
+/* Tanggal dan jam */
+.ucapan-time{
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* Isi pesan */
 .ucapan-item p{
-  margin-top:8px;
+  margin: 0;
+  margin-top: 8px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Responsive mobile */
+@media (max-width: 576px){
+  .ucapan-header{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ucapan-time{
+    font-size: 11px;
+  }
+
+  .ucapan-header h4{
+    font-size: 16px;
+  }
+
+  .ucapan-item p{
+    font-size: 14px;
+  }
 }

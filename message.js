@@ -38,6 +38,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // FORMAT DATE
+  function formatTanggal(waktu) {
+    const date = new Date(waktu);
+
+    return date.toLocaleString("id-ID", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+  }
+
   // LOAD DATA
   async function loadUcapan() {
     try {
@@ -49,9 +62,16 @@ document.addEventListener("DOMContentLoaded", () => {
       data.reverse().forEach(item => {
         html += `
           <div class="ucapan-item">
-            <h4>${item.nama || "-"}</h4>
-            <small>${item.hubungan || ""}</small>
+
+            <div class="ucapan-header">
+              <h4>${item.nama || "-"}</h4>
+              <span class="ucapan-time">
+                ${formatTanggal(item.timestamp)}
+              </span>
+            </div>
+
             <p>${item.pesan || ""}</p>
+
           </div>
         `;
       });
